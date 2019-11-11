@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Building teams: {{ section }} </title>
+
+    <style>
+      body {
+        background-color: #d6eaf8;
+      }
+      .footer {
+        margin-top: 5em;
+        font-size: .75em;
+      }
+    </style>
+    <script ="handlinguserandconnections.js"></script>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+
+    <div class="footer">
+      {% block footer %}(c) James Long 2012{% endblock %}
+    </div>
+  </body>
+</html>

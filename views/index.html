@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Building teams: {{ section }} </title>
+
+    <style>
+      body {
+        background-color: #d6eaf8;
+      }
+      .footer {
+        margin-top: 5em;
+        font-size: .75em;
+      }
+    </style>
+    <script src="./js/handlingusers.js"></script>
+  </head>
+  <body>
+    <div className='App container'>
+        <form >
+          <fieldset>
+            <legend> Username and skills to be searched </legend>
+            <label htmlFor='username'> Username </label>
+            <input type='textarea' name='username'  />
+            <fieldset>
+              <legend> Skills to be searched </legend>
+              <label htmlFor='python'> Python </label>
+              <input type='checkbox' name='skills' value=Python  />
+              <label htmlFor='CSS'> CSS </label>
+              <input type='checkbox' name='skills 'value='CSS'  />
+              <label htmlFor='HTML5'> HTML5 </label>
+              <input type='checkbox' name='skills' value='HTML5'  />
+              <label htmlFor='Javascript'> Javascript</label>
+              <input type='checkbox' name='skills' value='Javascript'  />
+              <label htmlFor='C'> C </label>
+              <input type='checkbox' name='skills' value='C'  />
+              <label htmlFor='DevOps'> DevOps </label>
+              <input type='checkbox' name='skills'value='DevOps'  />
+            </fieldset>
+            <fieldset>
+              <legend> Additional info </legend>
+              <label htmlFor='queries'> Name </label>
+              <input type='textarea' name='queries' value='q' />
+              <label htmlFor='limit'> Show me only the first</label>
+              <input type='textarea' name='queries' value='limit'  />
+              <label htmlFor='limit'> results </label>
+            </fieldset>
+            <input type='submit' value='Submit' />
+          </fieldset>
+        </form>
+      </div>
+    {% block content %}{% endblock %}
+
+    <div class="footer">
+      {% block footer %}(c) James Long 2012{% endblock %}
+    </div>
+  </body>
+</html>
